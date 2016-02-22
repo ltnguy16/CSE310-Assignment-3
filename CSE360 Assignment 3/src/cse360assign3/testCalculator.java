@@ -8,7 +8,8 @@ public class testCalculator {
 
 	@Test
 	public void Calculator_test_null() {
-		fail("Not yet implemented");
+		Calculator test = new Calculator();
+		assertNotNull(test);
 	}
 	
 	@Test
@@ -33,6 +34,11 @@ public class testCalculator {
 	
 	@Test
 	public void Divide_test(){
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void History_test(){
 		fail("Not yet implemented");
 	}
 
