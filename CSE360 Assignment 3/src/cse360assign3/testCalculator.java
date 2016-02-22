@@ -70,7 +70,8 @@ public class testCalculator {
 	
 	@Test		//Test to see if the correct history is being returned
 	public void History_test(){
-		fail("Not yet implemented");
+		Calculator test = new Calculator();
+		assertEquals("", test.getHistory());
 	}
 
 }
