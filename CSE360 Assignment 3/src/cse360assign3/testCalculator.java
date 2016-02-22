@@ -71,7 +71,19 @@ public class testCalculator {
 	@Test		//Test to see if the correct history is being returned
 	public void History_test(){
 		Calculator test = new Calculator();
-		assertEquals("", test.getHistory());
+		assertEquals("0", test.getHistory());
+		test.add(30);
+		assertEquals("0 + 30", test.getHistory());
+		test.subtract(15);
+		assertEquals("0 + 30 - 15", test.getHistory());
+		test.multiply(2);
+		assertEquals("0 + 30 - 15 * 2", test.getHistory());
+		test.divide(-5);
+		assertEquals("0 + 30 - 15 * 2 / -5", test.getHistory());
+		test.divide(0);
+		assertEquals("0 + 30 - 15 * 2 / -5 / 0", test.getHistory());
+		test.add(18);
+		assertEquals("0 + 30 - 15 * 2 / -5 / 0 + 18", test.getHistory());
+		assertEquals(18, test.getTotal());
 	}
-
 }
